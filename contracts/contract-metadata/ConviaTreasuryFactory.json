@@ -1,0 +1,231 @@
+{
+  "contractAddress": "0xf3a3cb27fc9bbb36383aacab5030869f4bb6552a",
+  "network": "ARC-TESTNET",
+  "deployerWalletId": "3c2464b2-8369-52e2-a782-800bbeca5396",
+  "contract_code_path": "/home/user/app/contracts/ConviaTreasuryFactory.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/ConviaTreasuryFactory.sol/ConviaTreasuryFactory.json",
+  "contract_network_and_links": {
+    "Arc Testnet": "https://explorer.testnet.arc.io/address/0xf3a3cb27fc9bbb36383aacab5030869f4bb6552a"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Arc Testnet",
+      "address": "0xf3a3cb27fc9bbb36383aacab5030869f4bb6552a",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0xf3a3cb27fc9bbb36383aacab5030869f4bb6552a",
+      "txHash": "0x7327e6bd81567a6793b0e9740094b545e5b6a52c8ad0c9c4000eca1741f2a16e",
+      "deployedAt": "2026-10-28T18:16:33.342Z"
+    },
+    {
+      "chain": "Arc Testnet",
+      "address": "0x90bcc63f793b10ef95f08e18fac82341d3e681c8",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0x90bcc63f793b10ef95f08e18fac82341d3e681c8",
+      "txHash": "0xd40806b4e042c43a0b6c40a76207ed924a87cae7ffec3c5c359018da7ecaa4ce",
+      "deployedAt": "2026-10-27T09:53:24.385Z"
+    },
+    {
+      "chain": "Arc Testnet",
+      "address": "0xf3cb4b9718cb929a38595b4f27af3001747ccf52",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0xf3cb4b9718cb929a38595b4f27af3001747ccf52",
+      "txHash": "0x33e234e450e0d2e836d3d426206fc363512893009a26b9327c3e88d4680cacb9",
+      "deployedAt": "2026-10-27T09:45:03.312Z"
+    },
+    {
+      "chain": "Arc Testnet",
+      "address": "0xf17e8a27068cc7b90f52e737805e6b93d165b83e",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0xf17e8a27068cc7b90f52e737805e6b93d165b83e",
+      "txHash": "0xcfb5f939f1a9373fda00ad9fb4edea765921cd6926284f891341e54f57323b34",
+      "deployedAt": "2026-10-26T14:46:47.528Z"
+    },
+    {
+      "chain": "Arc Testnet",
+      "address": "0x73fceae9c166ccb605e297233f4e61327094b5ee",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0x73fceae9c166ccb605e297233f4e61327094b5ee",
+      "txHash": "0x19efd7deacfc6b27006ab40220c38172da8e76026192897b8bc31fe7b3477ec6",
+      "deployedAt": "2026-10-26T14:05:27.578Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "function",
+      "name": "allTreasuries",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "createTreasury",
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "usdcToken",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "contributionAmount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "frequency",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "startTimestamp",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "endTimestamp",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "requiredApprovals",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "targetAmount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "maxMembers",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "extraMembers",
+          "type": "address[]",
+          "internalType": "address[]"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "treasury",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getAllTreasuries",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]",
+          "internalType": "address[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getTreasuriesCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getTreasuriesCreatedBy",
+      "inputs": [
+        {
+          "name": "creator",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]",
+          "internalType": "address[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "treasuriesCreatedBy",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "TreasuryCreated",
+      "inputs": [
+        {
+          "name": "treasury",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "creator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "indexed": false,
+          "internalType": "string"
+        }
+      ],
+      "anonymous": false
+    }
+  ]
+}

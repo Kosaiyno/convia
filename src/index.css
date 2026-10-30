@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Convia brand tokens ─────────────────────────────────────────────────── */
+:root {
+  /* Canvas */
+  --bg: #f8f6f1;
+  --bg-gradient: linear-gradient(160deg, #f0ede6 0%, #f8f6f1 45%, #edf4f4 100%);
+
+  /* Surfaces */
+  --surface:        rgba(255, 255, 255, 0.68);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-muted:  rgba(240, 237, 230, 0.70);
+
+  /* Typography */
+  --ink:   #0d2b2c;
+  --ink-2: #1e4748;
+  --muted: #5a6b6c;
+  --subtle:#7e9394;
+
+  /* Borders */
+  --border:       rgba(13, 43, 44, 0.10);
+  --border-strong:rgba(13, 43, 44, 0.30);
+
+  /* Brand accent — deep teal */
+  --accent:       #0a4f52;
+  --accent-mid:   #0d6b6e;
+  --accent-light: #e0f2f2;
+  --accent-hover: #0d6b6e;
+
+  /* Semantic */
+  --success: #136a3f;
+  --success-bg: #dcfce7;
+  --danger:  #b42b4b;
+  --danger-bg: #fee2e2;
+  --warn-bg: #fefce8;
+  --warn-text: #713f12;
+  --focus:   #6ab8bb;
+
+}
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100dvh;
+  background: var(--bg-gradient);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Type helpers ─────────────────────────────────────────────────────────── */
+.display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.03em; }
+.mono    { font-family: 'JetBrains Mono', Menlo, monospace; }
+
+/* ── Glass card ──────────────────────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 32px rgba(13, 43, 44, 0.07), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* ── Hero card ───────────────────────────────────────────────────────────── */
+.hero-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 40px rgba(13, 43, 44, 0.10), inset 0 1px 0 rgba(255,255,255,0.65);
+  border-radius: 1.5rem;
+}
+
+/* ── Tonal button (filled teal) ──────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.12s;
+}
+.btn-primary:hover  { opacity: 0.92; transform: scale(1.01); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+/* ── Ghost button ────────────────────────────────────────────────────────── */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.12s;
+}
+.btn-ghost:hover  { background: var(--surface-muted); }
+.btn-ghost:active { transform: scale(0.98); }
+.btn-ghost:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Back button ─────────────────────────────────────────────────────────── */
+.btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.btn-back:hover { background: var(--surface-muted); }
+
+/* ── Input ────────────────────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--surface-strong);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:focus {
+  border-color: var(--accent-mid);
+  box-shadow: 0 0 0 3px rgba(10, 79, 82, 0.12);
+}
+
+/* ── Stat chip ───────────────────────────────────────────────────────────── */
+.stat-chip {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+/* ── Nav item ────────────────────────────────────────────────────────────── */
+.nav-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s, background 0.12s;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--ink);
+}
+.nav-tile:hover { transform: scale(1.02); }
+
+/* ── Activity row ────────────────────────────────────────────────────────── */
+.activity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
+/* ── Badge ───────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
